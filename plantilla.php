@@ -52,15 +52,15 @@ class Plantilla {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto gap-2">
                             <li class="nav-item"><a class="nav-link" href="/api_pages/genero.php">Género</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/edad">Edad</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/universidades">Universidades</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/clima">Clima</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/pokemon">Pokémon</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/noticias">Noticias</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/monedas">Monedas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/imagenes">Imágenes</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/pais">País</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/api_pages/chistes">Chistes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/edad.php">Edad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/universidades.php">Universidades</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/clima.php">Clima</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/pokemon.php">Pokémon</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/noticias.php">Noticias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/monedas.php">Monedas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/imagenes.php">Imágenes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/pais.php">País</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/api_pages/chistes.php">Chistes</a></li>
                         </ul>
                     </div>
                 </div>

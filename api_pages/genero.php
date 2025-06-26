@@ -2,7 +2,7 @@
 include('../plantilla.php');
 Plantilla::aplicar();
 
-$nombre = '';
+$nombreGenero = '';
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -53,13 +53,13 @@ $nombre = '';
         <div class="col-md-6">
             <form id="formGenero" class="card p-4 rounded-4 shadow border-0" onsubmit="return false;">
                 <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ej. Georgia" required>
+                    <label for="nombreGenero" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="nombreGenero" id="nombreGenero" placeholder="Ej. Georgia" required>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Predecir género</button>
             </form>
 
-            <div id="resultado" class="mt-4"></div>
+            <div id="resultadoGenero" class="mt-4"></div>
         </div>
     </div>
 <div class="text-center mt-4">
@@ -69,23 +69,23 @@ $nombre = '';
 
 <script>
     document.getElementById('formGenero').addEventListener('submit', function() {
-        const nombre = document.getElementById('nombre').value.trim();
-        const resultadoDiv = document.getElementById('resultado');
-        resultadoDiv.innerHTML = ''; 
+        const nombreGenero = document.getElementById('nombreGenero').value.trim();
+        const resultadoGeneroDiv = document.getElementById('resultadoGenero');
+        resultadoGeneroDiv.innerHTML = ''; 
 
-        if (nombre === '') {
-            resultadoDiv.innerHTML = `<div class="alert alert-warning">Por favor ingresa un nombre.</div>`;
+        if (nombreGenero === '') {
+            resultadoGeneroDiv.innerHTML = `<div class="alert alert-warning">Por favor ingresa un nombre.</div>`;
             return;
         }
 
-        fetch(`https://api.genderize.io/?name=${encodeURIComponent(nombre)}`)
+        fetch(`https://api.genderize.io/?name=${encodeURIComponent(nombreGenero)}`)
             .then(response => response.json())
             .then(data => {
                 if (!data.gender) {
-                    resultadoDiv.innerHTML = `
+                    resultadoGeneroDiv.innerHTML = `
                         <div class="alert alert-secondary text-center">
                             <i class="bi bi-question-circle"></i>
-                            El nombre <strong>${nombre}</strong> no pudo ser identificado.
+                            El nombre <strong>${nombreGenero}</strong> no pudo ser identificado.
                         </div>`;
                     return;
                 }
@@ -112,13 +112,13 @@ $nombre = '';
                     generoTexto += ` <small>(${probabilidad}% seguro)</small>`;
                 }
 
-                resultadoDiv.innerHTML = `
+                resultadoGeneroDiv.innerHTML = `
                     <div class="alert text-white text-center" style="background-color: ${color};">
-                        <i class="bi ${icono}"></i> El nombre <strong>${nombre}</strong> es probablemente <strong>${generoTexto}</strong>
+                        <i class="bi ${icono}"></i> El nombre <strong>${nombreGenero}</strong> es probablemente <strong>${generoTexto}</strong>
                     </div>`;
             })
             .catch(error => {
-                resultadoDiv.innerHTML = `<div class="alert alert-danger">Error al obtener datos de la API.</div>`;
+                resultadoGeneroDiv.innerHTML = `<div class="alert alert-danger">Error al obtener datos de la API.</div>`;
                 console.error('Error:', error);
             });
     });
