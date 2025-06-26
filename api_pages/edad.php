@@ -67,6 +67,9 @@ $nombreEdad = '';
             <div id="resultadoEdad" class="mt-4"></div>
         </div>
     </div>
+    <div class="text-center mt-4">
+    <a href="../index.php" class="btn btn-secondary">Volver al Inicio</a>
+</div>
 </div>
 
 <script>
