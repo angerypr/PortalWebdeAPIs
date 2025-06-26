@@ -23,7 +23,7 @@ class Plantilla {
                 body {
                     font-family: 'Inter', sans-serif;
                     padding-top: 90px;
-                    background-color:rgb(26, 43, 93);
+                    background-color:transparent;
                 }
                 .navbar-custom {
                     background-color:rgb(17, 50, 71);
