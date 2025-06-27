@@ -103,15 +103,15 @@ $nombreEdad = '';
                 if (edad < 25) {
                     categoria = 'Joven';
                     emoji = '👶';
-                    imagen = 'https://cdn-icons-png.flaticon.com/512/4213/4213274.png';
+                    imagen = '../imagenes/joven.png';
                 } else if (edad < 60) {
                     categoria = 'Adulto';
                     emoji = '🧑';
-                    imagen = 'https://cdn-icons-png.flaticon.com/512/236/236832.png';
+                    imagen = '../imagenes/adulto.png';
                 } else {
                     categoria = 'Anciano';
                     emoji = '👴';
-                    imagen = 'https://cdn-icons-png.flaticon.com/512/1785/1785915.png';
+                    imagen = '../imagenes/anciano.png';
                 }
 
                 resultadoEdadDiv.innerHTML = `
